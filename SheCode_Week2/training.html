@@ -7,23 +7,23 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Hellow World</h1>
+    <h1>Hello World</h1>
     <button>Apply button</button>
 
     <script>
-      function canApply() {
+      function checkValidity() {
         let age = prompt("How old are you?");
         return age >= 18;
       }
-      function updatedHeading(newHeading) {
+      function updateMessage(newMessage) {
         let h1 = document.querySelector("h1");
-        h1.innerHTML = newHeading;
+        h1.innerHTML = newMessage;
       }
       function apply() {
-        if (canApply()) {
-          updatedHeading("You can apply🔥🔥🔥");
+        if (checkValidity()) {
+          updateMessage("You are welcome!!!😀😀😀😀😀😀😀");
         } else {
-          updatedHeading("Sorry 😭😭😭");
+          updateMessage("We are sorry 😒😒😒😒");
         }
       }
       let applyButton = document.querySelector("button");
