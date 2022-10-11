@@ -37,15 +37,19 @@ margin: 0;
             padding: 10px 0 10px 0;
             font-weight: bold;
         }
-        .apply-button{
-            background-color: #F6E198;
-            color: #7B73E6;
+        button{
+
             padding: 20px 40px 20px 40px;
-            margin: auto;
             border-radius: 20px;
             box-shadow: 5px 10px 20px rgb(0 0 0 / 50%);
             font-weight: bold;
-            border: aquamarine;
+            transition: all 200ms ease-in-out;
+        }
+
+        .apply-button{
+            background-color: #F6E198;
+            color: #7B73E6;
+            border:#F6E198;
         }
         .apply-button:hover {
             cursor: pointer;
@@ -57,12 +61,7 @@ margin: 0;
             .ask-button{
             background-color: #A8E6CF;
             color: #148496;
-            padding: 20px 40px 20px 40px;
-            margin: auto;
-            border-radius: 20px;
-            box-shadow: 5px 10px 20px rgb(0 0 0 / 50%);
-            font-weight: bold;
-            border: aquamarine;
+            border: #A8E6CF;
         }
         .ask-button:hover {
             cursor: pointer;
@@ -138,5 +137,42 @@ margin: 0;
  </p>
  <button class="ask-button">Ask us for help!</button>
 </div>
+
+<script>
+// Greeting
+// let name = prompt("What is your name?");
+// let h1 = document.querySelector('h1');
+// h1.innerHTML = `Hello, ${name}!`;
+
+
+// button 1
+function checkAge(){
+    let age = prompt("How old are you?");
+    return age >=16;
+}
+function chooseLanguage(){
+let language = prompt("What language do you want to learn?");
+    let message = document.querySelector(".part-one");
+    let messageTwo = document.querySelector(".part-two");
+    messageTwo.innerHTML = null;
+
+ let messageThree = document.querySelector(".part-three");
+    messageThree.innerHTML = null;
+
+    if (checkAge()){
+        let email = prompt("What is your contact email?");
+    message.innerHTML = `<em style = "color:red; forn-size: 50px; font-weight: bold">Thank you for applying! We'll contact you soon and provide with the information about ${language} language</em>`;
+}else{
+    message.innerHTML = `<em style = "color:red; forn-size: 50px; font-weight: bold">We are really sorry!!!😒😒😒 But you are too young to learn ${language} language</em>`;
+}
+}
+let applyButton = document.querySelector(".apply-button");
+applyButton.addEventListener("click", chooseLanguage);
+
+// button 2
+
+
+
+</script>
 </body>
 </html>
