@@ -6,32 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Week1; Lesson 2</title>
     <style>
-      h1,
-      h2 {
+      .header {
         padding-top: 80px;
-        font-weight: 900;
+
         font-size: 34px;
         margin: 0;
-        line-height: 48px;
       }
       h1 {
         color: #272044;
         text-align: center;
+        margin-bottom: 0;
       }
       h2 {
         text-align: center;
         color: #8064e9;
         padding: 0 0 24px;
+        margin-top: 0;
       }
-      p {
+      .main-content {
         font-size: 18px;
         line-height: 28px;
         font-family: "Source Code Pro", monospace;
         text-align: center;
         margin-bottom: 30px;
       }
-      div {
+      .button {
         margin-top: 60px;
+      }
+      .strong {
+        font-weight: bold;
       }
       button {
         cursor: pointer;
@@ -51,13 +54,16 @@
     </style>
   </head>
   <body>
-    <h1>👩‍💻Shecodes is a Coding Workshop for Women</h1>
-    <h2>Access a new career in Technology</h2>
-    <p>
+    <div class="header">
+      <h1>👩‍💻Shecodes is a Coding Workshop for Women</h1>
+
+      <h2>Access a new career in Technology</h2>
+    </div>
+    <div class="main-content">
       SheCodes teaches coding, design and management skills for women <br />
-      <strong> Limited number of spots available! </strong>
-    </p>
-    <div>
+      <span class="strong">Limited number of spots available!</span>
+    </div>
+    <div class="button">
       <button>Join Now</button>
     </div>
   </body>
