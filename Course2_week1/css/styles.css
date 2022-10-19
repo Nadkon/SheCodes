@@ -1,0 +1,50 @@
+.header {
+  padding-top: 80px;
+
+  font-size: 34px;
+  margin: 0;
+}
+.main-header {
+  color: #272044;
+  text-align: center;
+  margin-bottom: 0;
+}
+.second-header {
+  text-align: center;
+  color: #8064e9;
+  padding: 0 0 24px;
+  margin-top: 0;
+}
+.main-content {
+  font-size: 18px;
+  line-height: 28px;
+  font-family: "Source Code Pro", monospace;
+  text-align: center;
+  margin-bottom: 30px;
+}
+button {
+  cursor: pointer;
+  border-radius: 25px;
+  border: 1px solid #8064e9;
+  background: #8064e9;
+  color: #fff;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 16px 24px;
+  text-decoration: none;
+  transition: all 200ms ease;
+  box-shadow: rgb(37 39 89 / 8%) 0px 8px 8px 0;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+.button {
+  margin-top: 60px;
+}
+.strong {
+  font-weight: bold;
+}
+img {
+  display: block;
+  margin: 0 auto;
+}
