@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather forecast</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- form with input for city searcher -->
+      <div class="row">
+        <div class="col">
+          <!-- img + degree  -->
+          <img
+            class="icon header"
+            src="./img/sun-cloud.webp"
+            alt="weather-icon"
+          />
+          <span class="degree header">60</span>
+          <!-- To select C or F -->
+          <div class="group-switcher">
+            <a href="./index.html" class="degree-switcher" aria-current="page"
+              >°C</a
+            >
+            <span class="vert-line">|</span>
+            <!-- Click on link below and you will be redirected to the page with degrees in F -->
+            <a href="./f-index.html" class="degree-switcher active">°F</a>
+          </div>
+        </div>
+
+        <div class="col">
+          <form>
+            <input
+              class="city"
+              type="text"
+              placeholder="Enter city name here"
+            />
+          </form>
+        </div>
+
+        <div class="col card">
+          <div class="city-country">Kyiv, Ukraine</div>
+          <div class="date">Date: 19 Oct 2022</div>
+          <div class="weekday">Wednesday</div>
+          <div class="city-searcher">
+            <!-- Kyiv, Ukraine -->
+            <!-- date and weekday -->
+          </div>
+        </div>
+      </div>
+      <!-- Graphs-->
+      <div class="graphs">
+        <h2>Graph</h2>
+        <!-- Graphs are to be put here -->
+      </div>
+      <div class="card-forecast">
+        <div class="row">
+          <div class="col forecast">
+            <div class="weekday">Wed</div>
+            <div>
+              <img src="./img/rain.png" alt="" class="icon" />
+            </div>
+            <div class="degree-min">38°</div>
+            <div class="degree-max">62°</div>
+          </div>
+
+          <div class="col forecast">
+            <div class="weekday">Thu</div>
+            <div><img src="./img/rain.png" alt="" class="icon" /></div>
+            <div class="degree-min">29°</div>
+            <div class="degree-max">56°</div>
+          </div>
+
+          <div class="col forecast">
+            <div class="weekday">Fri</div>
+            <div><img src="./img/sun-cloud.webp" alt="" class="icon" /></div>
+            <div class="degree-min">46°</div>
+            <div class="degree-max">58°</div>
+          </div>
+
+          <div class="col forecast">
+            <div class="weekday">Sat</div>
+            <div><img src="./img/rain.png" alt="" class="icon" /></div>
+            <div class="degree-min">46°</div>
+            <div class="degree-max">59°</div>
+          </div>
+
+          <div class="col forecast">
+            <div class="weekday">Sun</div>
+            <div><img src="./img/rain.png" alt="" class="icon" /></div>
+            <div class="degree-min">50°</div>
+            <div class="degree-max">62°</div>
+          </div>
+
+          <div class="col forecast">
+            <div class="weekday">Mon</div>
+            <div><img src="./img/sun-cloud.webp" alt="" class="icon" /></div>
+            <div class="degree-min">51°</div>
+            <div class="degree-max">62°</div>
+          </div>
+
+          <div class="col forecast">
+            <div class="weekday">Tue</div>
+            <div><img src="./img/rain.png" alt="" class="icon" /></div>
+            <div class="degree-min">51°</div>
+            <div class="degree-max">65°</div>
+          </div>
+
+          <div class="col forecast">
+            <div class="weekday">Wed</div>
+            <div><img src="./img/rain.png" alt="" class="icon" /></div>
+            <div class="degree-min">48°</div>
+            <div class="degree-max">64°</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
