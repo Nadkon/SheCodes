@@ -39,6 +39,9 @@
   font-weight: 800;
   border: none;
 }
+.card ul.card-list {
+  list-style: none;
+}
 h2 {
   text-align: center;
   padding-top: 20px;
