@@ -21,15 +21,15 @@ let weather = {
   },
 };
 
-let city = prompt("Please enter a city...");
+let city = prompt("Please enter a city.");
 city = city.toLowerCase();
 city = city.trim();
 if (weather[city] !== undefined) {
-  let celsiusTemp = Math.round(weather[city].temp);
-  let farenheitTemp = Math.round((weather[city].temp * 9) / 5 + 32);
-  let humidity = weather[city].humidity;
+  let temperature = weather[city].temp;
+  let tempF = (temperature * 9) / 5 + 32;
+  let hum = weather[city].humidity;
   alert(
-    `It is currently ${celsiusTemp}°C (${farenheitTemp}°F) in ${city} with a humidity of ${humidity}%.`
+    `It is currently ${temperature}°C (${tempF}°F) in ${city} with a humidity of ${hum}%.`
   );
 } else {
   alert(
