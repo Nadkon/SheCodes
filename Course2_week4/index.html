@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather forecast</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- form with input for city searcher -->
+      <div class="row__first-line">
+
+        <!-- img + degree  -->
+        <div class="col__image">
+          <img
+            class="col__image-icon"
+            src="./img/sun-cloud.webp"
+            alt="weather-icon"
+          />
+          <div class="header"><span id="degree"> 14</span><sup><sup class="degree__symbol"><a href="#" id="celsius">°C </a>|<a href="#" id="fahrenheit"> °F</a></sup></sup>
+           </div>
+        </div>
+
+        <div class="col__form">
+          <form id="form-search">
+            <input
+              class="city"
+              type="text"
+              id = "city-input"
+              placeholder="Enter city name here"
+            />
+            <input type="submit" name="submit" id="submit">
+          </form>
+        </div>
+
+        <div class="col__card">
+          <h1 class="col__card-city" id="city">Kyiv</h1>
+          <ul class="card-list">
+            <li class="date">Date: 
+              <span id="date">19 </span> 
+              <span id="month">Oct </span>
+              <span id="year">2022</span>
+            </li>
+
+            <li class="weekday" id="weekday">Wednesday</li>
+          </ul>
+
+        </div>
+      </div>
+      <!-- Graphs-->
+      <div class="graphs">
+        <h2>Graph</h2>
+        <!-- Graphs are to be put here -->
+      </div>
+      <div class="card-forecast">
+        <div class="row__forecast">
+          <div class="col__forecast">
+            <div class="weekday">Wed</div>
+            <div>
+              <img src="./img/rain.png" alt="" class="icon" />
+            </div>
+            <div class="degree-min">2°</div>
+            <div class="degree-max">14°</div>
+          </div>
+
+          <div class="col__forecast">
+            <div class="weekday">Thu</div>
+            <div><img src="./img/rain.png" alt="" class="icon" /></div>
+            <div class="degree-min">2°</div>
+            <div class="degree-max">7°</div>
+          </div>
+
+          <div class="col__forecast">
+            <div class="weekday">Fri</div>
+            <div><img src="./img/sun-cloud.webp" alt="" class="icon" /></div>
+            <div class="degree-min">2°</div>
+            <div class="degree-max">9°</div>
+          </div>
+
+          <div class="col__forecast">
+            <div class="weekday">Sat</div>
+            <div><img src="./img/rain.png" alt="" class="icon" /></div>
+            <div class="degree-min">7°</div>
+            <div class="degree-max">11°</div>
+          </div>
+
+          <div class="col__forecast">
+            <div class="weekday">Sun</div>
+            <div><img src="./img/rain.png" alt="" class="icon" /></div>
+            <div class="degree-min">8°</div>
+            <div class="degree-max">14°</div>
+          </div>
+
+          <div class="col__forecast">
+            <div class="weekday">Mon</div>
+            <div><img src="./img/sun-cloud.webp" alt="" class="icon" /></div>
+            <div class="degree-min">7°</div>
+            <div class="degree-max">14°</div>
+          </div>
+
+          <div class="col__forecast">
+            <div class="weekday">Tue</div>
+            <div><img src="./img/rain.png" alt="" class="icon" /></div>
+            <div class="degree-min">7°</div>
+            <div class="degree-max">13°</div>
+          </div>
+
+          <div class="col__forecast">
+            <div class="weekday">Wed</div>
+            <div><img src="./img/rain.png" alt="" class="icon" /></div>
+            <div class="degree-min">7°</div>
+            <div class="degree-max">13°</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./src/script.js"></script>
+  </body>
+</html>

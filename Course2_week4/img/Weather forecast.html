@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://127.0.0.1:5500/index.html?# -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather forecast</title>
+    <link href="./Weather forecast_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="./Weather forecast_files/styles.css">
+  </head>
+  <body cz-shortcut-listen="true" data-new-gr-c-s-check-loaded="14.1085.0" data-gr-ext-installed="">
+    <div class="container">
+      <!-- form with input for city searcher -->
+      <div class="row">
+        <div class="col">
+          <!-- img + degree  -->
+          <img class="icon" src="./Weather forecast_files/sun-cloud.webp" alt="weather-icon">
+          <span class="degree header"> 14 </span>
+          <!-- To select C or F -->
+          <div class="group-switcher">
+            <a href="http://127.0.0.1:5500/index.html?#" class="degree-switcher active" aria-current="page">°C</a>
+            <span class="vert-line">|</span>
+            <!-- Click on link below and you will be redirected to the page with degrees in F -->
+            <a href="http://127.0.0.1:5500/f-index.html" class="degree-switcher">°F</a>
+          </div>
+        </div>
+
+        <div class="col">
+          <form class="city">
+            <input type="text" placeholder="Enter city name here">
+          </form>
+        </div>
+
+        <div class="col card">
+          <div class="city-country">Kyiv, Ukraine</div>
+          <div class="date">Date: 19 Oct 2022</div>
+          <div class="weekday">Wednesday</div>
+          <div class="city-searcher">
+            <!-- Kyiv, Ukraine -->
+            <!-- date and weekday -->
+          </div>
+        </div>
+      </div>
+      <!-- Graphs-->
+      <div class="graphs">
+        <h2>Graph</h2>
+        <!-- Graphs are to be put here -->
+      </div>
+      <div class="card-forecast">
+        <div class="row">
+          <div class="col">
+            <div class="weekday">Wed</div>
+            <div>
+              <img src="./Weather forecast_files/rain.png" alt="" class="icon">
+            </div>
+            <div class="degree-min">2°</div>
+            <div class="degree-max">14°</div>
+          </div>
+
+          <div class="col">
+            <div class="weekday">Thu</div>
+            <div><img src="./Weather forecast_files/rain.png" alt="" class="icon"></div>
+            <div class="degree-min">2°</div>
+            <div class="degree-max">7°</div>
+          </div>
+
+          <div class="col">
+            <div class="weekday">Fri</div>
+            <div><img src="./Weather forecast_files/sun-cloud.webp" alt="" class="icon"></div>
+            <div class="degree-min">2°</div>
+            <div class="degree-max">9°</div>
+          </div>
+
+          <div class="col">
+            <div class="weekday">Sat</div>
+            <div><img src="./Weather forecast_files/rain.png" alt="" class="icon"></div>
+            <div class="degree-min">7°</div>
+            <div class="degree-max">11°</div>
+          </div>
+
+          <div class="col">
+            <div class="weekday">Sun</div>
+            <div><img src="./Weather forecast_files/rain.png" alt="" class="icon"></div>
+            <div class="degree-min">8°</div>
+            <div class="degree-max">14°</div>
+          </div>
+
+          <div class="col">
+            <div class="weekday">Mon</div>
+            <div><img src="./Weather forecast_files/sun-cloud.webp" alt="" class="icon"></div>
+            <div class="degree-min">7°</div>
+            <div class="degree-max">14°</div>
+          </div>
+
+          <div class="col">
+            <div class="weekday">Tue</div>
+            <div><img src="./Weather forecast_files/rain.png" alt="" class="icon"></div>
+            <div class="degree-min">7°</div>
+            <div class="degree-max">13°</div>
+          </div>
+
+          <div class="col">
+            <div class="weekday">Wed</div>
+            <div><img src="./Weather forecast_files/rain.png" alt="" class="icon"></div>
+            <div class="degree-min">7°</div>
+            <div class="degree-max">13°</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
