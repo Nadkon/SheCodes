@@ -1,4 +1,6 @@
 // Current date, time and weekday
+function setDate (currentTime){
+    
 let now = new Date();
 let date = now.getDate();
 let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -7,18 +9,21 @@ let year = now.getFullYear();
 let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 let day = days[now.getDay()];
 let hour = now.getHours();
+if (hour < 10){
+    hour = `0${hour}`;
+}
+
 let minute = now.getMinutes();
+if (minute < 10){
+    minute = `0${minute}`;
+}
 
-// alert(`Today is ${date} ${month} ${year}, ${day}, ${hour}:${minute}`);
+return (`${date} ${month} ${year}<br/> ${day}, ${hour}:${minute}`);
+}
 let currentDate = document.querySelector("#date");
-let currentMonth = document.querySelector("#month");
-let currentYear = document.querySelector("#year");
-let weekDay = document.querySelector("#weekday");
+let currentTime = new Date();
+currentDate.innerHTML = setDate(currentTime);
 
-currentDate.innerHTML = date;
-currentMonth.innerHTML = month;
-currentYear.innerHTML = year;
-weekDay.innerHTML = day;
 
 // City search
 function searchCity(event){
@@ -45,7 +50,7 @@ fahrenheit.innerHTML = "°F";
 
 function changeToFahrenheit(event){
     let degree = document.querySelector("#degree");
-    degree.innerHTML = 57;    
+    degree.innerHTML = Math.round((degree * 9) / 5 + 32);    
     let fahrenheit = document.querySelector("#fahrenheit");
     fahrenheit.innerHTML = "<strong>°F</strong>";
     let celsius = document.querySelector("#celsius");
