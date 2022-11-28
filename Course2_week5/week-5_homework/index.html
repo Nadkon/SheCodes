@@ -12,24 +12,24 @@
     <div class="container">
     <div class="form">
         <form id="form-search">
-            <input type="text" class="form-city" name="city" placeholder="Type a city...">
+            <input type="text" class="form-city" id="input-city" placeholder="Type a city...">
             <input type="submit" value="Search" class="search" id="search">
         </form>
-        <input type="submit" value="Current" class="current" is="current">
+        <input type="submit" value="Current" class="current" id="current">
     </div>
     <div class="info">
-    <h1 class="city" id="city">My city</h1>
+    <h1 class="city" id="city"></h1>
     <div class="date-time">
         <ul>
-            <li id="date-time">Monday 07:07</li>
-            <li>Clear</li>
+            <li id="date-time"></li>
+            <li id="description"></li>
         </ul>
     </div>
-    <div class="temp" id="temp">-2</div>
+    <div class="temp"><span id="temp"></span><sup>c</sup></div>
     <div class="hum-wind">
         <ul>
-            <li>Humidity: 46%</li>
-            <li>Wind: 6 km/h</li>
+            <li id="humidity">Humidity:</li>
+            <li id="wind-speed">Wind:</li>
         </ul>
     </div>
 </div>
